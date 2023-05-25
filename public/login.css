@@ -51,6 +51,10 @@ a {
    left:67.2px;
 }
 
+.login-form input#password.error {
+    border: 1px solid red;
+  }
+
 .login-form a {
     width:50%;
     display: block;
