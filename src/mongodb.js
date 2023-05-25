@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // name: LoginDB
-mongoose.connect("mongodb://localhost::27017//LoginDB")
+mongoose.connect("mongodb://localhost:27017/LoginDB")
 .then(()=> {
     console.log("mongoDB connected")
 }).catch(() => {
@@ -17,7 +17,7 @@ const LogInSchema = new mongoose.Schema({
         required:true
     }
 })
-
+// change model name everytime u use the template
 const collection = new  mongoose.model('Collection1',LogInSchema)
 
 module.exports = collection;
