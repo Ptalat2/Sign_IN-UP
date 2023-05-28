@@ -1,15 +1,17 @@
 function handleServerError() {
     // Code to handle the server error signal
-    // For example, you can modify the DOM or perform any desired operations
-    if(count> 0 ) {
+    if(count >0 ) {
       //event.preventDefault(); // Prevent form submission
 
       var passwordInput = document.getElementById("password");
       var errorMessage = document.getElementById("error-message");
     
       // Check if password is incorrect
-      
-        errorMessage.textContent = "Invalid name/password combination";
+        if(count ==2) {
+          errorMessage.textContent = "Invalid name/password combination";
+        } else {
+          errorMessage.textContent ="name/password combination already taken"
+        }
     
         // Add red flash animation class
         passwordInput.classList.add("red-flash");
@@ -23,6 +25,8 @@ function handleServerError() {
       alert("we good fam")
 
     }
+
+   
   }
 
  

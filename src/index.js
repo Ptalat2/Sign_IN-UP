@@ -32,19 +32,36 @@ app.listen(3000 , () => {
 
 
 app.post("/signup", async (req, res) => {
-    const data = {
-      name: req.body.name,
-      password: req.body.password
-    };
-  
-    try {
+  const username = req.body.name;
+  const password = req.body.password;
+
+  try {
+    // Check if username or password already exists in the collection
+    const existingUser = await collection.findOne({
+      $or: [
+        { name: username },
+        { password: password }
+      ]
+    });
+
+    if (existingUser) {
+      // User or password already exists
+      res.render("signup", { errorResponse: { message: 'Already used', count:3 } });
+    } else {
+      // Create a new user
+      const data = {
+        name: username,
+        password: password
+      };
       await collection.create(data);
       res.render("home");
-    } catch (error) {
-      console.error(error);
-      // Handle the error appropriately
     }
-  });
+  } catch (error) {
+    console.error(error);
+    // Handle the error appropriately
+  }
+});
+
   let count =0;
 
   app.post("/login", async (req, res) => {

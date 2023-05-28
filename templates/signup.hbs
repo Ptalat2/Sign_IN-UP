@@ -10,11 +10,21 @@
 <body>
     <div class="signup-container">
         <h2>Signup</h2>
+         <div id="error-message"></div>
         <form action="/signup" method="post" class="signup-form">
             <input type="text" name="name" placeholder="Name">
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Password">
             <input type="submit" value="Signup">
         </form>
     </div>
 </body>
+
+ <script src="/script.js"></script>
+    {{#if errorResponse}}
+    <script>
+      const count = "{{errorResponse.count}}";
+      console.log(count);
+      handleServerError()
+    </script>
+    {{/if}}
 </html>
