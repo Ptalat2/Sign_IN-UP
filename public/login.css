@@ -55,6 +55,50 @@ a {
     border: 1px solid red;
   }
 
+  @keyframes shakeAnimation {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-10px) rotate(-5deg); }
+    20% { transform: translateX(10px) rotate(5deg); }
+    30% { transform: translateX(-10px) rotate(-5deg); }
+    40% { transform: translateX(10px) rotate(5deg); }
+    50% { transform: translateX(-10px) rotate(-5deg); }
+    60% { transform: translateX(10px) rotate(5deg); }
+    70% { transform: translateX(-10px) rotate(-5deg); }
+    80% { transform: translateX(10px) rotate(5deg); }
+    90% { transform: translateX(-10px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+  }
+  
+  @keyframes redFlash {
+    0% { background-color: red; }
+    50% { background-color: white; }
+    100% { background-color: red; }
+  }
+  
+  .red-flash {
+    animation: redFlash 20s, shakeAnimation 1s;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  #error-message {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease-in-out;
+
+  }
+
 .login-form a {
     width:50%;
     display: block;

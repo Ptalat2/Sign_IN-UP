@@ -53,13 +53,13 @@ app.post("/signup", async (req, res) => {
     if (check.password === req.body.password) {
       res.render("home");
     } else {
-        res.render('login', { errorResponse: { message: 'Wrong password', count:count } });
-        ++count;
+        res.render('login', { errorResponse: { message: 'Wrong password', count:2 } });
+       
     }
   } catch (error) {
-    res.render('login', { errorResponse: { message: 'Wrong details' ,  count:count } });
+    res.render('login', { errorResponse: { message: 'Wrong details' ,  count:2 } });
     console.error(error);
-    ++count;
+    
     // Handle the error appropriately
   }
 });
