@@ -17,7 +17,7 @@ function handleServerError() {
         // Remove the class after the animation completes
         setTimeout(function() {
           passwordInput.classList.remove("red-flash");
-        }, 1000);
+        }, 900);
       
     } else {
       alert("we good fam")
