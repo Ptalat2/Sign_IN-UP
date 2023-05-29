@@ -9,6 +9,13 @@ Project Name is a web application that provides a basic login/signup form using 
 - Templating engine: Utilizes HBS (Handlebars) for server-side rendering.
 - Edge cases taken: Visual error checks for user authentication
 
+## Modifications
+
+- Modify the Home.hbs page to serve your needs of your app
+- Update the home.css for style
+- Add any script files for functionality
+- give credit to ptalat2
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/ptalat2/Sign_IN-UP.git`
