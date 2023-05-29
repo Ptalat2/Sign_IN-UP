@@ -1,0 +1,63 @@
+# Project Name
+
+Project Name is a web application that provides a basic login/signup form using JavaScript, MongoDB, and HBS (Handlebars).
+
+## Features
+
+- User authentication: Allows users to create an account and login securely.
+- Persistent data storage: Stores user information in a MongoDB database.
+- Templating engine: Utilizes HBS (Handlebars) for server-side rendering.
+- Edge cases taken: Visual error checks for user authentication
+
+## Installation
+
+1. Clone the repository: `git clone https://github.com/ptalat2/Sign_IN-UP.git`
+2. Navigate to the project directory: `cd Sign_IN-UP`
+3. Install dependencies: `npm install`
+
+## Configuration
+
+1. Rename the `.env.example` file to `.env`.
+2. Modify the `.env` file to include your MongoDB connection string and other configuration variables.
+
+## Usage
+
+1. Start the application: `npm start`
+2. Open your web browser and navigate to `http://localhost:3000`.
+3. You should now see the login/signup form.
+
+or
+
+1. Install nodemon
+2. Open command prompt
+3. Enter: nodemon src/index.js
+4. Open your web browser and navigate to `http://localhost:3000`.
+5. You should now see the login/signup form.
+
+## MongoDb
+
+1. Install MongoDB compass to see the database configuration
+   -If any difficulty refer to Acknowledgments section
+
+## Dependencies
+
+- Express: Fast, unopinionated web framework for Node.js.
+- MongoDB: Official MongoDB driver for Node.js.
+- HBS: Express.js view engine for Handlebars templates.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+If you have any questions, suggestions, or feedback, please feel free to contact me at [talatipreet@gmail.com].
+
+## Acknowledgments
+
+- https://youtu.be/V8dYGNfHjfk
+
+## Copyright (c)
+
+- Owned by Preet Talati
+- Any use of this source code should be credited to Preet Talati
